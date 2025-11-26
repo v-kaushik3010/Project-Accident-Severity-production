@@ -38,7 +38,7 @@ def predict():
         probs = model.predict_proba(df).tolist()
     except Exception:
         probs = None
-    # Try to provide a tiny explanation: feature importances if available
+    # Try to provide a tiny explanation: feature importances if a
     explanation = None
     try:
         if hasattr(model.named_steps['clf'], 'feature_importances_'):
