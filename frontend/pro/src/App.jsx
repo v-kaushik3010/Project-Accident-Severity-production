@@ -3,16 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { predictSeverity } from './api';
 import './styles.css';
 
-/*
-  IMPORTANT:
-  - This UI expects the model server to return:
-    {
-      prediction: <int 0..3>,
-      probabilities: [p0, p1, p2, p3],   // floats summing ~1 or close
-      explanation: { feature_importances: [ ... ] }   // optional
-    }
-  If your backend returns different shapes, adapt accordingly.
-*/
+
 
 const SEVERITY_LABELS = ['Minor', 'Moderate', 'Serious', 'Fatal'];
 const SEVERITY_COLORS = ['severity-low', 'severity-medium', 'severity-high', 'severity-high'];
